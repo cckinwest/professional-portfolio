@@ -4,13 +4,16 @@ body {
     font-size: 16px;
 }
 
+section {
+    padding: 2vh;
+}
 /*Components of header*/
 header {
     background-color: #FF577F;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 2vh;
     position: relative;
     z-index: 2;
 }
@@ -21,8 +24,8 @@ header {
 }
 
 #profile-pic > img {
-    height: 100px;
-    width: 100px;
+    height: 10vh;
+    width: 10vh;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -34,12 +37,12 @@ header {
 }
 
 #menu-btn {
-    padding: 20px;
+    padding: 2vh;
     background-color: #FF884B;
-    border-radius: 10px;
+    border-radius: 1vh;
     position: absolute;
-    right: 20px;
-    top: 40px;
+    right: 2vh;
+    top: 4vh;
     display: none;
 }
 
@@ -56,7 +59,7 @@ header {
 }
 
 #menu-content li {
-    margin: 0 1.5em;
+    margin: 0 1vh;
 }
 
 #menu-content a:-webkit-any-link {
@@ -71,7 +74,6 @@ header {
 /*Components for Story section*/
 #Story {
     background-color: #FF884B;
-    padding: 20px;
     display: block;
     position: relative;
     z-index: 1;
@@ -84,25 +86,25 @@ header {
 .article-select {
     position: absolute;
     padding: 1vh 2vh;
-    right: 20px;
-    bottom: 20px;
+    right: 2vh;
+    bottom: 2vh;
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 1vh;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 1em;
     color: #000000;
 }
 
 #page1 {
-    right: 320px;
+    right: 32vh;
 }
 
 #page2 {
-    right: 220px;
+    right: 22vh;
 }
 
 #page3 {
-    right: 120px;
+    right: 12vh;
 }
 
 .article-select:active {
@@ -111,10 +113,10 @@ header {
 
 .story-card {
     background-color: #FEFAE0;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 60px;
-    min-height: 300px;
+    border-radius: 2vh;
+    padding: 2vh;
+    margin-bottom: 6vh;
+    min-height: 30vh;
     color: #000000;
     box-shadow: 3px 3px 2px 2px rgba(200, 200, 200, 0.5);
     display: none;
@@ -124,15 +126,15 @@ header {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3em;
     color: #000000;
-    text-shadow: 4px 4px 4px rgba(46, 91, 173, 0.6);
+    text-shadow: 0.25em 0.25em 0.25em rgba(46, 91, 173, 0.6);
 }
 
 .story-card > img {
-    height: 33vh;
-    width: 44vh;
+    height: 30vh;
+    width: 40vh;
     object-fit: cover;
-    border-radius: 20px;
-    margin-left: 20px;
+    border-radius: 2vh;
+    margin-left: 2vh;
     float: right;
 }
 
@@ -153,18 +155,17 @@ header {
 /*components of Work section*/
 #Work {
     background-color: #FFD384;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .work-card {
-    margin: 20px;
+    margin: 2vh;
     background-color: #FF884B;
-    padding: 20px;
-    border-radius: 20px;
-    min-height: 300px;
-    flex: 1 1 40%;
+    padding: 2vh;
+    border-radius: 2vh;
+    min-height: 30vh;
+    flex: 1 1 40vw;
     position: relative;
     background-repeat: no-repeat;
     background-position: center center;
@@ -177,21 +178,21 @@ header {
 }
 
 #marketing {
-    flex: 1 1 100%;
+    flex: 1 1 100vw;
 }
 
 .work-card-content {
     display: block;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 2vh;
+    border-radius: 2vh;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
 .skill {
     border: 2px solid rgba(0, 0, 0, 1);
-    padding: 5px;
-    border-radius: 8px;
-    margin-right: 10px;
+    padding: 0.5vh;
+    border-radius: 0.8vh;
+    margin-right: 1vh;
 }
 
 /*Contact section*/
@@ -200,7 +201,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
 .contacts {
@@ -231,8 +231,8 @@ header {
     }
 
     #profile-pic > img {
-        height: 80px;
-        width: 80px;
+        height: 8vh;
+        width: 8vh;
     }
 
     #profile-pic > span {
@@ -257,10 +257,10 @@ header {
     #menu-checkbox:checked + #menu-content {
         display: block;
         position: absolute;
-        right: 20px;
-        padding: 20px;
+        right: 2vh;
+        padding: 2vh;
         background-color: rgba(240, 240, 240, 0.4);
-        border-radius: 10px;
+        border-radius: 1vh;
     }
 
     #menu-btn:active {
@@ -268,4 +268,15 @@ header {
         color: #FF577F;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    .story-card > img {
+        float: none;
+        margin: 0;
+    }
 }
