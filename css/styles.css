@@ -83,41 +83,37 @@ header {
 
 .article-select {
     position: absolute;
-    top: 120px;
-    left: 0;
-    padding: 10px;
-    background-color: #FEFAE0;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    padding: 1vh 2vh;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 10px;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #000000;
+}
+
+#page1 {
+    right: 320px;
+}
+
+#page2 {
+    right: 220px;
+}
+
+#page3 {
+    right: 120px;
 }
 
 .article-select:active {
     font-weight: 700;
 }
 
-#label1 {
-    left: 60px;
-}
-
-#label2 {
-    left: 180px;
-}
-
-#label3 {
-    left: 340px;
-}
-
-#label4 {
-    left: 440px;
-}
-
 .story-card {
     background-color: #FEFAE0;
     border-radius: 20px;
     padding: 20px;
+    margin-bottom: 60px;
     min-height: 300px;
     color: #000000;
     box-shadow: 3px 3px 2px 2px rgba(200, 200, 200, 0.5);
@@ -127,11 +123,14 @@ header {
 .section-title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 3em;
-    color: #FFFFFF;
+    color: #000000;
+    text-shadow: 4px 4px 4px rgba(46, 91, 173, 0.6);
 }
 
-.story-card img {
-    max-height: 300px;
+.story-card > img {
+    height: 33vh;
+    width: 44vh;
+    object-fit: cover;
     border-radius: 20px;
     margin-left: 20px;
     float: right;
@@ -182,8 +181,7 @@ header {
 }
 
 .work-card-content {
-    display: none;
-    width: 40%;
+    display: block;
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.6);
@@ -194,21 +192,6 @@ header {
     padding: 5px;
     border-radius: 8px;
     margin-right: 10px;
-}
-
-.work-card:hover .work-card-content {
-    display: block;
-    animation: pulse 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /*Contact section*/
@@ -236,7 +219,7 @@ header {
 }
 
 .contact:hover {
-    color: #ffffff
+    color: grey
 }
 
 /*responsive design*/
