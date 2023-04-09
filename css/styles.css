@@ -280,3 +280,21 @@ header {
         margin: 0;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .article-select {
+        padding: 0.5vh 1vh;
+    }
+
+    #page1 {
+        right: 26vh;
+    }
+    
+    #page2 {
+        right: 18vh;
+    }
+    
+    #page3 {
+        right: 10vh;
+    }
+}
