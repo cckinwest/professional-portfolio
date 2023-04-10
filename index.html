@@ -61,7 +61,11 @@
                 hoped to become a programmer in the future. </p>
         </article>
 
-        <button id="next">Next</button>
+        <nav id="button-menu">
+            <button id="prev">Prev</button>
+            <div id="pages-select"></div>
+            <button id="next">Next</button>
+        </nav>
     </section>
 
     <section id="Work">
@@ -127,13 +131,74 @@
         var index = 0;
         var NumOfStories = document.getElementsByClassName("story-card").length;
 
+        window.addEventListener("load", renderPagesButton);
         document.getElementById("next").addEventListener("click", next);
+        document.getElementById("prev").addEventListener("click", prev);
+
+        function renderPagesButton() {
+            pagesMenu = document.getElementById("pages-select");
+            for (var i = 0; i < NumOfStories; i++) {
+                var btn = document.createElement("label");
+                btn.id = `page${i}`;
+                btn.className = "pageButton";
+                btn.innerHTML = `${i + 1}`
+
+                btn.addEventListener("click", (event) => {
+                    document.getElementById(`article${index}`).style.display = "none";
+                    var pageNumber = Number(event.target.id.at(-1));
+                    document.getElementById(`article${pageNumber}`).style.display = "block";
+                    index = pageNumber;
+                    event.target.style.fontWeight = 900;
+                    event.target.style.color = "#ffffff";
+
+                    var arr = document.getElementsByClassName("pageButton");
+                    for (var k = 0; k < arr.length; k++){
+                        if (k !== index) {
+                            document.getElementById(`page${k}`).style.fontWeight = 400;
+                            document.getElementById(`page${k}`).style.color = "#000000";
+                        }
+                    }
+                })
+
+                pagesMenu.appendChild(btn)
+            }
+
+            document.getElementById("page0").style.fontWeight = 900;
+            document.getElementById("page0").style.color = "#ffffff";
+        }
+
+        function prev() {
+            document.getElementById(`article${index}`).style.display = "none";
+
+            if (index === 0) {
+                index = 4;
+            }
+            document.getElementById(`article${index - 1}`).style.display = "block";
+
+            index -= 1;
+            index = index % NumOfStories;
+
+            for (var i = 0; i < NumOfStories; i++) {
+                document.getElementById(`page${i}`).style.fontWeight = 400;
+                document.getElementById(`page${i}`).style.color = "#000000";
+            }
+            document.getElementById(`page${index}`).style.fontWeight = 900;
+            document.getElementById(`page${index}`).style.color = "#ffffff";
+        }
 
         function next() {
-            document.getElementById(`article${(index) % NumOfStories}`).style.display = "none";
+            document.getElementById(`article${index}`).style.display = "none";
             document.getElementById(`article${(index + 1) % NumOfStories}`).style.display = "block";
 
             index += 1;
+            index = index % NumOfStories;
+
+            for (var i = 0; i < NumOfStories; i++) {
+                document.getElementById(`page${i}`).style.fontWeight = 400;
+                document.getElementById(`page${i}`).style.color = "#000000";
+            }
+            document.getElementById(`page${index}`).style.fontWeight = 900;
+            document.getElementById(`page${index}`).style.color = "#ffffff";
         }
 
     </script>
