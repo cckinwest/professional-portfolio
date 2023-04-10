@@ -79,38 +79,6 @@ header {
     z-index: 1;
 }
 
-.article-select-radio {
-    display: none;
-}
-
-.article-select {
-    position: absolute;
-    padding: 1vh 2vh;
-    right: 2vh;
-    bottom: 2vh;
-    border: 1px solid #000000;
-    border-radius: 1vh;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    color: #000000;
-}
-
-#page1 {
-    right: 32vh;
-}
-
-#page2 {
-    right: 22vh;
-}
-
-#page3 {
-    right: 12vh;
-}
-
-.article-select:active {
-    font-weight: 700;
-}
-
 .story-card {
     background-color: #FEFAE0;
     border-radius: 2vh;
@@ -120,6 +88,10 @@ header {
     color: #000000;
     box-shadow: 3px 3px 2px 2px rgba(200, 200, 200, 0.5);
     display: none;
+}
+
+#article0 {
+    display: block;
 }
 
 .section-title {
@@ -148,8 +120,12 @@ header {
     font-size: 1.5em;
 }
 
-.article-select-radio:checked + .story-card {
-    display: block;
+#next {
+    position: absolute;
+    right: 2vh;
+    bottom: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 /*components of Work section*/
@@ -284,17 +260,5 @@ header {
 @media screen and (max-width: 375px) {
     .article-select {
         padding: 0.5vh 1vh;
-    }
-
-    #page1 {
-        right: 26vh;
-    }
-    
-    #page2 {
-        right: 18vh;
-    }
-    
-    #page3 {
-        right: 10vh;
     }
 }

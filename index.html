@@ -27,17 +27,15 @@
 
     <section id="Story">
         <h1 class="section-title">Story</h1>
-        <label class="article-select" for="radio1" id="page1">page1</label>
-        <input type="radio" id="radio1" class="article-select-radio" name="articleSelected" checked/>
-        <article class="story-card" id="early-day">
+        
+        <article class="story-card" id="article0">
             <img src="./image/Victoria-Peak-hong-kong.jpg" alt="Harbour view of Hong Kong" />
             <h2 class="article-title">Early day in Hong Kong</h2>
             <p>I am a HongKonger. I lived there for 36 years. Hong Kong was full of opportunities and had the most culturally
                  diversified lifestyle in the world. I had never though that I might leave HK and live in another country. </p>
         </article>
-        <label class="article-select" for="radio2" id="page2">page2</label>
-        <input type="radio" id="radio2" class="article-select-radio" name="articleSelected" />
-        <article class="story-card" id="comfort-zone">
+        
+        <article class="story-card" id="article1">
             <img src="./image/With-friends.jpg" alt="Meeting with friends" />
             <h2 class="article-title">Comfort-zone</h2>
             <p>I was an editor for many years in Hong Kong, I loved that job because it gave me a very stable life. When I 
@@ -45,9 +43,8 @@
                 Like many HongKongers, I saved money to buy a flat. I enjoyed working like an ant to pay mortgage. I thought 
                 of buying another apartment for letting, which was a typical dream of HongKonger.</p>
         </article>
-        <label class="article-select" for="radio3" id="page3">page3</label>
-        <input type="radio" id="radio3" class="article-select-radio" name="articleSelected" />
-        <article class="story-card" id="unrest">
+        
+        <article class="story-card" id="article2">
             <img src="./image/unrest.jpg" alt="Unrest in Hong Kong in 2019" />
             <h2 class="article-title">Unrest</h2>
             <p>Because Hong Kong government wanted to pass a law that most HongKong people worried, millions came 
@@ -55,15 +52,16 @@
                 protest continued until China grabed the Covid as a chance to abolish most freedoms of HongKongers. I felt 
                 that I had to leave Hong Kong as I saw no hopes in my beloved home city.</p>
         </article>
-        <label class="article-select" for="radio4" id="page4">page4</label>
-        <input type="radio" id="radio4" class="article-select-radio" name="articleSelected" />
-        <article class="story-card" id="settle">
+        
+        <article class="story-card" id="article3">
             <img src="./image/Coventry.jpg" alt="My new home in the UK" />
             <h2 class="article-title">Settle</h2>
             <p>I came here in last July. It was difficult to find a job and I worked in a warehouse and now I am a bank
                 worker in NHS. Fortunately, there is no racial discrimination which I had feared. I am now taking a bootcamp and 
                 hoped to become a programmer in the future. </p>
         </article>
+
+        <button id="next">Next</button>
     </section>
 
     <section id="Work">
@@ -124,5 +122,21 @@
             <a href="https://github.com/cckinwest" class="contact">Github</a>
         </div>
     </section>
+
+    <script type="text/javascript">
+        var index = 0;
+        var NumOfStories = document.getElementsByClassName("story-card").length;
+
+        document.getElementById("next").addEventListener("click", next);
+
+        function next() {
+            document.getElementById(`article${(index) % NumOfStories}`).style.display = "none";
+            document.getElementById(`article${(index + 1) % NumOfStories}`).style.display = "block";
+
+            index += 1;
+        }
+
+    </script>
+
 </body>
 </html>
