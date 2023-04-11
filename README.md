@@ -21,19 +21,19 @@ It contains two links: Email and Github. Clicking Email can send email to me. Cl
 ## Responsive design
 This page has several breakpoints: 1200px, 1024px, and 768px. Different widths are handled differently as shown below.
 
-![original layout of webpage]("./image/portfolio-original.png")
+![original layout of webpage](./image/portfolio-original.png)
 
 ### 1200px
 The title name at the header "ChiKin's Profile" goes to the bottom of my profile-pic. The title and the pic are diminished by a little bit.
 
-![layout in 1200px width]("./image/portfolio-1200.png")
+![layout in 1200px width](./image/portfolio-1200.png)
 
 ### 1024px
 The 3 links to the right of the header are grouped into a menu button. All the blocks in "Work" become full-width.
 
-![layout in 1024px width]("./image/portfolio-1024.png")
+![layout in 1024px width](./image/portfolio-1024.png)
 
 ### 768px
 All the font-size reduced from 16px to 12px. The photos in "Story" become full-width and the contents are display in block.
 
-![layout in 768px width]("./image/portfolio-768.png")
+![layout in 768px width](./image/portfolio-768.png)
