@@ -1,12 +1,13 @@
 body {
     color: #ffffff;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 16px;
 }
 
 section {
     padding: 2vh;
 }
+
 /*Components of header*/
 header {
     background-color: #FF577F;
@@ -23,15 +24,15 @@ header {
     align-items: center;
 }
 
-#profile-pic > img {
+#profile-pic>img {
     height: 10vh;
     width: 10vh;
     border-radius: 50%;
     object-fit: cover;
 }
 
-#profile-pic > span {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+#profile-pic>span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 4em;
     padding-left: 0.5em;
 }
@@ -55,7 +56,7 @@ header {
     justify-content: space-between;
     font-size: 2em;
     list-style-type: none;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #menu-content li {
@@ -101,7 +102,7 @@ header {
     text-shadow: 0.25em 0.25em 0.25em rgba(46, 91, 173, 0.6);
 }
 
-.story-card > img {
+.story-card>img {
     height: 30vh;
     width: 40vh;
     object-fit: cover;
@@ -111,12 +112,12 @@ header {
 }
 
 .article-title {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2em;
 }
 
 .story-card p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.5em;
 }
 
@@ -126,12 +127,13 @@ header {
     bottom: 2vh;
 }
 
-#prev, #next {
+#prev,
+#next {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
 
-#pages-select > label {
+#pages-select>label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: 400;
@@ -221,12 +223,12 @@ header {
         align-items: center;
     }
 
-    #profile-pic > img {
+    #profile-pic>img {
         height: 8vh;
         width: 8vh;
     }
 
-    #profile-pic > span {
+    #profile-pic>span {
         font-size: 1.5em;
     }
 }
@@ -245,7 +247,7 @@ header {
         display: block;
     }
 
-    #menu-checkbox:checked + #menu-content {
+    #menu-checkbox:checked+#menu-content {
         display: block;
         position: absolute;
         right: 2vh;
@@ -266,7 +268,7 @@ header {
         font-size: 12px;
     }
 
-    .story-card > img {
+    .story-card>img {
         float: none;
         margin: 0;
         width: 100%;
