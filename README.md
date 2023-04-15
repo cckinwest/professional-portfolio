@@ -1,5 +1,7 @@
 # Week2-Challenge: professional-portfolio
 
+[link to the portfolio page](https://cckinwest.github.io/professional-portfolio/)
+
 ## Purpose
 This assignment is to create a portfolio for showing my skills and talents to employers looking to fill a part-time or full-time position.
 
